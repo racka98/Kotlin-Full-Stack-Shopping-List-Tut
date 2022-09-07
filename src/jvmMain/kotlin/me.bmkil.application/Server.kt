@@ -1,6 +1,5 @@
 package me.bmkil.application
 
-
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
@@ -35,7 +34,7 @@ fun HTML.home() {
 }
 
 fun main() {
-    embeddedServer(Netty, port = 9090, host = "0.0.0.0") {
+    embeddedServer(Netty, port = 9090) {
 
         install(ContentNegotiation) { json() }
         install(Compression) { gzip() }

@@ -16,6 +16,7 @@ val InputComponent = FC<InputProps> { props ->
 
     form {
         onSubmit = {
+            it.preventDefault()
             props.submit(text)
             setText("")
         }
