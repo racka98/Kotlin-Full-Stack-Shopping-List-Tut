@@ -40,8 +40,10 @@ fun main() {
         install(ContentNegotiation) { json() }
         install(Compression) { gzip() }
         install(CORS) {
+            allowHeader(HttpHeaders.ContentType)
             allowMethod(HttpMethod.Get)
             allowMethod(HttpMethod.Post)
+            allowMethod(HttpMethod.Put)
             allowMethod(HttpMethod.Delete)
             anyHost()
         }

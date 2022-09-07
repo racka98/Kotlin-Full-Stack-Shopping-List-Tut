@@ -16,7 +16,7 @@ suspend fun getShoppingList(): List<ShoppingListItem> {
 
 suspend fun addShoppingListItem(shoppingListItem: ShoppingListItem) {
     println("Adding item: $shoppingListItem")
-    jsonClient.post(ShoppingListItem.path) {
+    jsonClient.put(ShoppingListItem.path) {
         contentType(ContentType.Application.Json)
         setBody(shoppingListItem)
     }
