@@ -43,7 +43,6 @@ fun main() {
             allowHeader(HttpHeaders.ContentType)
             allowMethod(HttpMethod.Get)
             allowMethod(HttpMethod.Post)
-            allowMethod(HttpMethod.Put)
             allowMethod(HttpMethod.Delete)
             anyHost()
         }
