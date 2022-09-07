@@ -10,10 +10,12 @@ val jsonClient = HttpClient {
 }
 
 suspend fun getShoppingList(): List<ShoppingListItem> {
+    println("Getting Shopping List...")
     return jsonClient.get(ShoppingListItem.path).body()
 }
 
 suspend fun addShoppingListItem(shoppingListItem: ShoppingListItem) {
+    println("Adding item: $shoppingListItem")
     jsonClient.post(ShoppingListItem.path) {
         contentType(ContentType.Application.Json)
         setBody(shoppingListItem)
