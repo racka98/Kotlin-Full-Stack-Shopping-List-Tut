@@ -35,7 +35,7 @@ fun HTML.home() {
 }
 
 fun main() {
-    embeddedServer(Netty, port = 9090, host = "127.0.0.1") {
+    embeddedServer(Netty, port = 9090, host = "0.0.0.0") {
 
         install(ContentNegotiation) { json() }
         install(Compression) { gzip() }
