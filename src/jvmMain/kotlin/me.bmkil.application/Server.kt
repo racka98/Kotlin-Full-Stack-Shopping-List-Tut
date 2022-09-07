@@ -61,7 +61,7 @@ fun main() {
                     println("Server - Get Shopping list")
                     call.respond(shoppingList)
                 }
-                put {
+                post {
                     println("Server - Adding Item in Shopping List")
                     shoppingList += call.receive<ShoppingListItem>()
                     call.respond(HttpStatusCode.OK)
